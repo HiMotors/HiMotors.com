@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Hi Motors</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <h2 style="text-align: start;">Aqui para você</h2>
+        <h1 style="font-size: 50px;">Alta variedade para que você possa escolher o certo</h1>
+        <button>Veja mais</button>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2>Últimos Lançamentos</h2>
+        <div class="cards">
+            {% for c in carros_lancamentos %}
+            <div class="card">
+                <div class="img">IMAGEM</div>
+                <div class="other">
+                    <h3 class="car-name">{{ c.nome }}</h3>
+                    <p class="car-details">{{ c.detalhes }}<span>À partir de</span></p>
+                    <span class="car-price">{{ c.preco }}</span>
+                    <button class="comprar-button">Comprar</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <button class="ofertas">Outras ofertas</button>
+    
+    <section>
+        <h2>BMW</h2>
+        <div class="cards">
+            {% for c in carros_bmw %}
+            <div class="card">
+                <div class="img">IMAGEM</div>
+                <div class="other">
+                    <h3 class="car-name">{{ c.nome }}</h3>
+                    <p class="car-details">{{ c.detalhes }}<span>À partir de</span></p>
+                    <span class="car-price">{{ c.preco }}</span>
+                    <button class="comprar-button">Comprar</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p><img src="../imgs/logo-removebg-preview.png" alt=""></p>
+    <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
