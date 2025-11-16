@@ -54,3 +54,7 @@ CREATE TABLE Pagamento (
   id_locacao INT,
   FOREIGN KEY (id_locacao) REFERENCES Locacao(id_locacao)
 );
+
+SELECT modelo, marca, placa
+FROM Carro
+WHERE status = 'disponível' AND id_categoria = 1;

@@ -3,6 +3,10 @@
     margin: 0;
     font-family: Arial, sans-serif;
 }
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
 :root {
     --blue2:#001b3d;
@@ -15,20 +19,28 @@ body {
     background-color: #f1f1f1;
 }
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')
+nav {
+    display: block;
+    align-self: center;
+}
+.logo {
+    font: 1em sans-serif;
+    font-weight: 700;
+}
+
+.banner {
+    background: url('../imgs/HiMotors\ Banner.png')
         center/cover no-repeat;
     height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 60px;
     color: white;
     box-shadow: 0 5px 20px var(--shadow);
 }
-.hero-content {
+.banner-content {
     width: 45%;
-    padding-left: 80px;
+    padding: 60px 0 0 60px ;
 }
 
 button {
@@ -39,18 +51,29 @@ button {
     color: white;
     cursor: pointer;
 }
+button:hover{
+    background: #1a1a1a33;
+}
 .ofertas {
     margin: auto;
     display: block;
     color: var(--blue1);
     border-color: var(--blue1);
 }
+.ofertas:hover {
+    background: #d1d1d1;
+}
 .comprar-button {
-    margin: 5px auto 0 auto;
+    margin: 8px auto 0 auto;
     display: block;
     color: var(--blue2);
     border-color: var(--blue2);
     padding: 5px 20px;
+}
+.comprar-button:hover{
+    background: var(--blue2);
+    color: #fff;
+    font-weight: bold;
 }
 
 h2 { 
@@ -66,7 +89,7 @@ h2 {
 }
 
 .card {
-    height: 300px;
+    height: 305px;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -116,4 +139,38 @@ footer {
 }
 .links-footer span:hover {
     text-decoration: underline;
+}
+
+/* Reduzir padding e ajustar o layout para telas pequenas */
+@media (max-width: 768px) {
+    .banner-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        height: auto; /* permite altura automática para melhor fluidez */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    nav .logo {
+        font-size: 1.2em;
+    }
+
+    .banner {
+        height: 50vh;
+        padding: 20px;
+    }
 }

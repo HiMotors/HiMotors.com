@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 app = Flask(__name__)
 
@@ -21,6 +21,23 @@ def home():
         carros_lancamentos=carros_lancamentos,
         carros_bmw=carros_bmw
     )
+
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        # Exemplo: validar usuário (substituir pela sua lógica)
+        if email == "usuario" and password == "senha123":
+            session["user"] = email
+            return redirect(url_for("home"))
+        else:
+            flash("Usuário ou senha inválidos")
+    return render_template("login.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

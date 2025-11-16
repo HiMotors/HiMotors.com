@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - HiMotors</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+<section class="login-container">
+  <h2 class="logo">H!Motors</h2>
+  <form id="loginForm" action="{{ url_for( 'login') }}" method="POST">
+    <input class="email" type="text" id="email" name="email" placeholder="Email" required autocomplete="email">
+    <input class="senha" type="password" id="password" name="password" placeholder="Senha" required autocomplete="current-password">
+    <div class="buttons">
+      <button class="next" type="submit">Avançar</button>
+      <button type="submit">Registrar</button>
+    </div>
+    <p id="message" style="color:red;"></p>
+  </form>
+</section>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul style="color: red;">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<footer>
+    <p><span class="logo"><a href="{{ url_for('home') }}">H!Motors</a></span></p>
+    <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

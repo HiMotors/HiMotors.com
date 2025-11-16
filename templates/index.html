@@ -2,13 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Hi Motors</title>
+<title>HiMotors</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-<header class="hero">
-    <div class="hero-content">
+<header class="banner">
+    <nav class="">
+        <span class="logo"><a href="#">H!Motors</a> | <a href="{{ url_for('login') }}">Login</a></span>
+    </nav>
+    <div class="banner-content">
         <h2 style="text-align: start;">Aqui para você</h2>
         <h1 style="font-size: 50px;">Alta variedade para que você possa escolher o certo</h1>
         <button>Veja mais</button>
@@ -54,7 +57,7 @@
 </main>
 
 <footer>
-    <p><img src="../imgs/logo-removebg-preview.png" alt=""></p>
+    <p><span class="logo"><a href="#">H!Motors</a></span></p>
     <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
 </footer>
 
