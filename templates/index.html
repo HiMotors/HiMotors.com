@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <title>HiMotors</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='imgs/logo-himotors.ico') }}" type="image/x-icon">
 </head>
 <body>
 
 <header class="banner">
     <nav class="">
-        <span class="logo"><a href="#">H!Motors</a> | <a href="{{ url_for('login') }}">Login</a></span>
+        <span class="header-links"><a href="#">H!Motors</a> | <a href="{{ url_for('login') }}">Login</a></span>
     </nav>
     <div class="banner-content">
         <h2 style="text-align: start;">Aqui para você</h2>
@@ -27,9 +28,9 @@
                 <div class="img">IMAGEM</div>
                 <div class="other">
                     <h3 class="car-name">{{ c.nome }}</h3>
-                    <p class="car-details">{{ c.detalhes }}<span>À partir de</span></p>
+                    <p class="car-details">{{ c.desc }}<span>À partir de</span></p>
                     <span class="car-price">{{ c.preco }}</span>
-                    <button class="comprar-button">Comprar</button>
+                    <a href="{{ url_for('carro_detalhes', nome=c.nome) }}"><button class="comprar-button">Comprar</button></a>
                 </div>
             </div>
             {% endfor %}
@@ -46,9 +47,9 @@
                 <div class="img">IMAGEM</div>
                 <div class="other">
                     <h3 class="car-name">{{ c.nome }}</h3>
-                    <p class="car-details">{{ c.detalhes }}<span>À partir de</span></p>
+                    <p class="car-details">{{ c.desc }}<span>À partir de</span></p>
                     <span class="car-price">{{ c.preco }}</span>
-                    <button class="comprar-button">Comprar</button>
+                    <a href="{{ url_for('carro_detalhes', nome=c.nome) }}"><button class="comprar-button">Comprar</button></a>
                 </div>
             </div>
             {% endfor %}
@@ -57,7 +58,7 @@
 </main>
 
 <footer>
-    <p><span class="logo"><a href="#">H!Motors</a></span></p>
+    <p><span class="logo-footer"><a href="#">H!Motors</a></span></p>
     <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
 </footer>
 

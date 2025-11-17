@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ c.nome }} - Detalhes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalhes.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/logo-himotors.ico') }}" type="image/x-icon">
+</head>
+<body>
+
+<header class="">
+    <a href="/" class="logo">H!Motors</a>
+</header>
+    <div class="car-img">
+        <img src="{{ url_for('static', filename='imgs/carros/' + c.nome|lower + '.png') }}" alt="{{ c.nome }}">
+    </div>
+
+<section class="car-details">
+    <div class="car-info">
+        <div class="info-container">
+            <div class="left-content">
+                <h1 class="car-name">{{ c.nome }}</h1>
+                <p class="car-desc">{{ c.desc }}</p>
+            </div>
+            <div class="right-content">
+                <h2 class="car-preco">{{ c.preco }}</h2>
+                <button class="btn-buy">Solicitar compra</button>
+            </div>
+        </div>
+        <p class="text-desc">Reconhecida por sua combinação de luxo e desempenho, a Série 5 aprimora esses atributos em sua mais recente geração. É tão suave que um interessado na Série 7 pode preferir seu tamanho menor, enquanto um motorista da Série 3 certamente apreciará seu requinte sofisticado.
+
+Com seu interior espaçoso, bancos ergonômicos e condução equilibrada, o Série 5 é um excelente carro para o dia a dia ou para viagens longas. A tecnologia abundante e os impressionantes recursos de assistência ao motorista permitem que os quilômetros passem voando. Na versão básica 530i, a sensação ao dirigir tende  mais para o relaxamento do que para a esportividade , mas o M5 e, em menor grau, o 550e e o 540i xDrive, adicionam uma generosa dose de potência.
+
+Esta geração da Série 5 demonstra como a BMW compreende aquela sensação inimitável que tornou o carro popular por tantos anos — ela continua a oferecer uma combinação irresistível de conforto e dinamismo. De forma impressionante, a BMW conseguiu condensar essa personalidade  no i5 totalmente elétrico , oferecendo aos compradores da Série 5 diversas opções interessantes.
+
+</p>
+    </div>
+</section>
+
+<footer>
+    <p><span class="logo-footer"><a href="#">H!Motors</a></span></p>
+    <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
+</footer>
+    
+<script src="{{ url_for('static', filename='js/detalhes.js' )}}"></script>
+
+</body>
+</html>

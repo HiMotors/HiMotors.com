@@ -3,9 +3,10 @@
     margin: 0;
     font-family: Arial, sans-serif;
 }
-a {
+.header-links > a, .logo-footer > a{
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
 }
 
 :root {
@@ -22,10 +23,6 @@ body {
 nav {
     display: block;
     align-self: center;
-}
-.logo {
-    font: 1em sans-serif;
-    font-weight: 700;
 }
 
 .banner {
@@ -50,6 +47,10 @@ button {
     border-radius: 30px;
     color: white;
     cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: 0;
 }
 button:hover{
     background: #1a1a1a33;

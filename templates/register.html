@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar-se - HiMotors</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/logo-himotors.ico') }}" type="image/x-icon">
+</head>
+<body>
+
+<form action="{{ url_for('register') }}" method="POST">
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Senha" required>
+  <button type="submit">Registrar</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+</body>
+</html>
