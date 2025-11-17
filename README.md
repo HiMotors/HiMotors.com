@@ -1,4 +1,4 @@
-# Locação Carros (Hi Motors) - Flask
+# Locação Carros (HiMotors) - Flask
 
 ## instalar
 python -m venv venv
@@ -13,6 +13,6 @@ python app.py
 # abra http://127.0.0.1:5000
 
 ## credenciais admin (exemplo)
-user: admin
-senha: admin123
+user: usuario@gmail.com
+senha: senha123
 (Altere a senha no banco assim que possível.)
