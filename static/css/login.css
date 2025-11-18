@@ -12,6 +12,13 @@
     --shadow:#00000055;
 }
 
+main {
+    height: 93.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
     font-size: large;
     text-align: center;
@@ -22,14 +29,15 @@ section {
     display: flex;
     gap: 30px;
     flex-direction: column;
-    justify-self: center;
+    justify-content: center;
     width: 350px;
     height: 400px;
     background: #fff;
     box-shadow: 0px 0px 20px var(--shadow);
     padding: 50px;
     border-radius: 20px;
-    margin: 50px auto;
+    margin: auto;
+    align-items: center;
 }
 
 input {
@@ -77,9 +85,9 @@ footer {
     background: var(--blue2);
     color: white;
     padding: 20px 40px;
-    margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
 }
 .logo {
     font-weight: bold;

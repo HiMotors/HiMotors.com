@@ -25,7 +25,7 @@
         <div class="cards">
             {% for c in carros_lancamentos %}
             <div class="card">
-                <div class="img">IMAGEM</div>
+                <div class="img"><img src="{{ url_for('static', filename='imgs/card-imgs/' + c.nome + '.png') }}" alt="{{ c.nome }}"></div>
                 <div class="other">
                     <h3 class="car-name">{{ c.nome }}</h3>
                     <p class="car-details">{{ c.desc }}<span>À partir de</span></p>
@@ -44,7 +44,7 @@
         <div class="cards">
             {% for c in carros_bmw %}
             <div class="card">
-                <div class="img">IMAGEM</div>
+                <div class="img"><img src="{{ url_for('static', filename='imgs/card-imgs/' + c.nome + '.png') }}" alt="{{ c.nome }}"></div>
                 <div class="other">
                     <h3 class="car-name">{{ c.nome }}</h3>
                     <p class="car-details">{{ c.desc }}<span>À partir de</span></p>
@@ -58,7 +58,7 @@
 </main>
 
 <footer>
-    <p><span class="logo-footer"><a href="#">H!Motors</a></span></p>
+    <p><span class="logo-footer"><a href="#"><img src="{{ url_for('static', filename='imgs/'logo-removebg.png') }}" alt="{{ c.nome }}"></a></span></p>
     <p class="links-footer"><span>Informações Legais</span> | <span>Privacidade</span> | <span>Cookies</span></p>
 </footer>
 

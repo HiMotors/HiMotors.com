@@ -5,15 +5,15 @@ app = Flask(__name__)
 app.secret_key = 'zagoda231'
 
 carros_lancamentos = [
-    {"nome": "Volkswagen Tera", "desc": "SUV 1.0 170 TSI", "preco": "R$ 141.890"},
-    {"nome": "Chevrolet Onix", "desc": "Premier AT Turbo", "preco": "R$ 127.490"},
-    {"nome": "Toyota Yaris Cross", "desc": "SUV Hybrid 130", "preco": "R$ 185.090"},
+    {"nome": "Volkswagen Tera", "desc": "SUV 1.0 170 TSI", "preco": "R$ 500 por dia"},
+    {"nome": "Chevrolet Onix", "desc": "Premier AT Turbo", "preco": "R$ 300 por dia"},
+    {"nome": "Toyota Yaris Cross", "desc": "SUV Hybrid 130", "preco": "R$ 500 por dia"},
 ]
 
 carros_bmw = [
-    {"nome": "BMW i5", "desc": "M60 xDrive Sport", "preco": "R$ 759.950"},
-    {"nome": "BMW X1", "desc": "SUV iDrive 8.0", "preco": "R$ 342.085"},
-    {"nome": "BMW M5", "desc": "4.4 V8 xDrive", "preco": "R$ 811.540"},
+    {"nome": "BMW i5", "desc": "M60 xDrive Sport", "preco": "R$ 600 por dia"},
+    {"nome": "BMW X1", "desc": "SUV iDrive 8.0", "preco": "R$ 600 por dia"},
+    {"nome": "BMW M5", "desc": "4.4 V8 xDrive", "preco": "R$ 600 por dia"},
 ]
 
 @app.route("/")
